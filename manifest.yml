@@ -1,0 +1,12 @@
+---
+applications:
+  - name: spm-graph
+    memory: 256MB
+    disk_quota: 720M
+    host: spm_graph
+    domain: cfapps.eu10.hana.ondemand.com
+    command: python index.py
+    buildpacks: ["python_buildpack"]
+    services:
+      - xsuaa-app
+      - app-logs
